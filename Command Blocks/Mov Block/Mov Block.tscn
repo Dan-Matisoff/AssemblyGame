@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ccqe3hexaaed4"]
+
+[ext_resource type="Script" uid="uid://dwacbbs2g4ps8" path="res://Command Blocks/Mov Block/mov_block.gd" id="1_ipxv4"]
+[ext_resource type="Texture2D" uid="uid://cxxhqbxtybsbd" path="res://Command Blocks/command_blocks_01.png" id="2_6p66m"]
+[ext_resource type="PackedScene" uid="uid://fsrfbr24d641" path="res://Col_Boxes/HitBox/HitBox.tscn" id="3_e18g2"]
+[ext_resource type="FontFile" uid="uid://cc4ocb2e7kaw7" path="res://textures/dogicapixelbold.ttf" id="3_ys6t3"]
+[ext_resource type="PackedScene" uid="uid://cjst160cf4d28" path="res://Command Blocks/active_check.tscn" id="4_6p66m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_71j37"]
+font = ExtResource("3_ys6t3")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ys6t3"]
+height = 32.0
+
+[node name="MovBlock" type="Node2D" unique_id=1512604758]
+script = ExtResource("1_ipxv4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1847393178]
+texture = ExtResource("2_6p66m")
+hframes = 7
+vframes = 2
+frame = 10
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=560687831]
+offset_left = -14.0
+offset_top = -4.0
+offset_right = 26.0
+offset_bottom = 19.0
+text = "MOV"
+label_settings = SubResource("LabelSettings_71j37")
+
+[node name="HitBox" parent="." unique_id=2113565105 instance=ExtResource("3_e18g2")]
+visible = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1263404590]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ys6t3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2043492403]
+visible = false
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1570451863]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ys6t3")
+
+[node name="ActiveCheck" parent="." unique_id=1400025188 instance=ExtResource("4_6p66m")]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dghlc7udds80j"]
+
+[ext_resource type="Script" uid="uid://p3tsnnq6efxi" path="res://Command Blocks/Cmp Block/cmp_block.gd" id="1_omano"]
+[ext_resource type="Texture2D" uid="uid://cxxhqbxtybsbd" path="res://Command Blocks/command_blocks_01.png" id="2_dq023"]
+[ext_resource type="PackedScene" uid="uid://fsrfbr24d641" path="res://Col_Boxes/HitBox/HitBox.tscn" id="3_ux44j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ys6t3"]
+height = 32.0
+
+[node name="CmpBlock" type="Node2D" unique_id=1512604758]
+script = ExtResource("1_omano")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1847393178]
+texture = ExtResource("2_dq023")
+hframes = 7
+vframes = 2
+frame = 3
+
+[node name="HitBox" parent="." unique_id=2113565105 instance=ExtResource("3_ux44j")]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1263404590]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ys6t3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2043492403]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1570451863]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ys6t3")

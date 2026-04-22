@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cjst160cf4d28"]
+
+[ext_resource type="Script" uid="uid://css8ugibg2gmy" path="res://Command Blocks/ActiveCheck.gd" id="1_xo23n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ipxv4"]
+radius = 8.0
+
+[node name="ActiveCheck" type="Node2D" unique_id=1400025188]
+script = ExtResource("1_xo23n")
+
+[node name="DestinationR" type="Area2D" parent="." unique_id=788483387]
+collision_layer = 0
+collision_mask = 256
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DestinationR" unique_id=243028183]
+position = Vector2(32, 0)
+shape = SubResource("CircleShape2D_ipxv4")
+
+[node name="SourceR" type="Area2D" parent="." unique_id=1374385105]
+collision_layer = 0
+collision_mask = 260
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SourceR" unique_id=1570276986]
+position = Vector2(64, 0)
+shape = SubResource("CircleShape2D_ipxv4")

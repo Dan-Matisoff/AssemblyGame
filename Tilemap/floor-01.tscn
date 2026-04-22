@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dgo40wto2ngb8"]
+
+[ext_resource type="Texture2D" uid="uid://dxe4qihu8prjl" path="res://Tilemap/Sprites/tileset_attempt_01.png" id="1_6l8v1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djadb"]
+texture = ExtResource("1_6l8v1")
+texture_region_size = Vector2i(20, 20)
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+2:0/next_alternative_id = 2
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_eiw7q"]
+tile_size = Vector2i(20, 20)
+physics_layer_0/collision_layer = 16
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_djadb")
+
+[node name="Floor01" type="TileMap" unique_id=2068976940]
+z_index = -1
+tile_set = SubResource("TileSet_eiw7q")
+format = 2

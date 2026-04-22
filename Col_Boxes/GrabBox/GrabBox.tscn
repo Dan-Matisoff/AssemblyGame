@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cqhib5hlrn1md"]
+
+[ext_resource type="Script" uid="uid://blv46crx7pw50" path="res://Col_Boxes/GrabBox/grab_box.gd" id="1_rmey1"]
+
+[node name="GrabBox" type="Area2D" unique_id=2062558728]
+collision_layer = 0
+collision_mask = 256
+script = ExtResource("1_rmey1")

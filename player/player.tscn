@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://blwfx4i2uvuk2"]
+
+[ext_resource type="Script" uid="uid://b5ktor1pxd2lj" path="res://player/scripts/Player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://brqcb7krsg0qq" path="res://textures/sprites/mcsprite_32.png" id="2_yw30f"]
+[ext_resource type="PackedScene" uid="uid://cqhib5hlrn1md" path="res://Col_Boxes/GrabBox/GrabBox.tscn" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://bi8crng77m8rx" path="res://player/wall_coll.gd" id="4_yw30f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjkh3"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yw30f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
+radius = 7.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1220541025]
+collision_mask = 16
+script = ExtResource("1_rkbax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=504956584]
+shape = SubResource("RectangleShape2D_qjkh3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1982009664]
+texture = ExtResource("2_yw30f")
+
+[node name="Collisions" type="Node2D" parent="." unique_id=1715091480]
+
+[node name="ButtonM" type="Area2D" parent="Collisions" unique_id=433266285]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/ButtonM" unique_id=1505234073]
+shape = SubResource("RectangleShape2D_qjkh3")
+
+[node name="WallColl" type="Node2D" parent="Collisions" unique_id=1466617791]
+script = ExtResource("4_yw30f")
+
+[node name="Down" type="Area2D" parent="Collisions/WallColl" unique_id=1523963756]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/WallColl/Down" unique_id=1133743663]
+position = Vector2(0, 32)
+shape = SubResource("CircleShape2D_yw30f")
+
+[node name="Left" type="Area2D" parent="Collisions/WallColl" unique_id=737860706]
+rotation = 1.5707964
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/WallColl/Left" unique_id=1473203887]
+position = Vector2(0, 32)
+shape = SubResource("CircleShape2D_yw30f")
+
+[node name="Up" type="Area2D" parent="Collisions/WallColl" unique_id=881024979]
+rotation = 3.1415927
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/WallColl/Up" unique_id=1465989628]
+position = Vector2(0, 32)
+shape = SubResource("CircleShape2D_yw30f")
+
+[node name="Right" type="Area2D" parent="Collisions/WallColl" unique_id=913340421]
+rotation = -1.5707964
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/WallColl/Right" unique_id=1207689338]
+position = Vector2(0, 32)
+shape = SubResource("CircleShape2D_yw30f")
+
+[node name="GrabBox" parent="Collisions" unique_id=2062558728 instance=ExtResource("3_g1dw6")]
+collision_mask = 272
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/GrabBox" unique_id=1956500975]
+position = Vector2(0, 32)
+shape = SubResource("CircleShape2D_g1dw6")
