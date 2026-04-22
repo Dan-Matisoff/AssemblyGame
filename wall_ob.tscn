@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://vblfvvl7wpek"]
+
+[ext_resource type="Texture2D" uid="uid://b53dtaqr7vpia" path="res://Tilemap/Sprites/tileset_attempt_02.png" id="1_8u0l8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kld18"]
+size = Vector2(32, 32)
+
+[node name="WallOb" type="Node2D" unique_id=2108646825]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1928365847]
+collision_layer = 272
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1502132632]
+shape = SubResource("RectangleShape2D_kld18")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1606916442]
+texture = ExtResource("1_8u0l8")
+hframes = 4
+frame = 3

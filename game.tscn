@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://xgw5xmq4siph"]
+
+[ext_resource type="Script" uid="uid://3aijukvc1mmt" path="res://title_screen.gd" id="2_7jktm"]
+[ext_resource type="FontFile" uid="uid://cc4ocb2e7kaw7" path="res://textures/dogicapixelbold.ttf" id="3_ryrav"]
+[ext_resource type="Texture2D" uid="uid://brqcb7krsg0qq" path="res://textures/sprites/mcsprite_32.png" id="4_eow3j"]
+[ext_resource type="Script" uid="uid://66odqs746ebm" path="res://level_select.gd" id="4_ryrav"]
+[ext_resource type="Script" uid="uid://4biogyhgeac3" path="res://level_menu.gd" id="5_ryrav"]
+[ext_resource type="PackedScene" uid="uid://ch26m2q6sprrb" path="res://level_grid.tscn" id="6_eow3j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5wjh"]
+bg_color = Color(0.5647059, 0.6117647, 0.60784316, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vef74"]
+diffuse_texture = ExtResource("4_eow3j")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fc0e3"]
+font = ExtResource("3_ryrav")
+
+[node name="Game" type="Node" unique_id=1226119928]
+
+[node name="TitleScreen" type="Control" parent="." unique_id=1820766385]
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 544.0
+script = ExtResource("2_7jktm")
+
+[node name="Cover" type="Panel" parent="TitleScreen" unique_id=1379999321]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -272.0
+offset_right = 320.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5wjh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TitleScreen" unique_id=781533899]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -176.0
+offset_right = 320.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_ryrav")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+text = "Register Rescue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="TitleScreen" unique_id=2047187540]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 352.0
+offset_right = 384.0
+offset_bottom = 416.0
+theme_override_fonts/font = ExtResource("3_ryrav")
+text = "START"
+icon = SubResource("CanvasTexture_vef74")
+
+[node name="LevelSelect" type="Control" parent="." unique_id=1264046592]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_ryrav")
+
+[node name="Cover" type="Panel" parent="LevelSelect" unique_id=1427087386]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 544.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5wjh")
+
+[node name="LevelMenu" type="MarginContainer" parent="LevelSelect" unique_id=1544406074]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 544.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("5_ryrav")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelSelect/LevelMenu" unique_id=1462588161]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Title" type="Label" parent="LevelSelect/LevelMenu/VBoxContainer" unique_id=1614231764]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_fc0e3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelSelect/LevelMenu/VBoxContainer" unique_id=2143360790]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="LevelSelect/LevelMenu/VBoxContainer/HBoxContainer" unique_id=1584803531]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClipControl" type="Control" parent="LevelSelect/LevelMenu/VBoxContainer/HBoxContainer" unique_id=1546655091]
+clip_contents = true
+custom_minimum_size = Vector2(428, 212)
+layout_mode = 2
+
+[node name="GridBox" type="HBoxContainer" parent="LevelSelect/LevelMenu/VBoxContainer/HBoxContainer/ClipControl" unique_id=426060690]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="LevelGrid" parent="LevelSelect/LevelMenu/VBoxContainer/HBoxContainer/ClipControl/GridBox" unique_id=1209191889 instance=ExtResource("6_eow3j")]
+layout_mode = 2
+
+[node name="LevelGrid2" parent="LevelSelect/LevelMenu/VBoxContainer/HBoxContainer/ClipControl/GridBox" unique_id=1054538375 instance=ExtResource("6_eow3j")]
+layout_mode = 2
+
+[node name="NextButton" type="Button" parent="LevelSelect/LevelMenu/VBoxContainer/HBoxContainer" unique_id=384705849]
+layout_mode = 2
+size_flags_horizontal = 3

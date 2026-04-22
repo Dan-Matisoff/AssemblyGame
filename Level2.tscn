@@ -1,0 +1,206 @@
+[gd_scene format=4 uid="uid://c1xoddga2e1v5"]
+
+[ext_resource type="Script" uid="uid://qyjgr3ysm1xd" path="res://level_2.gd" id="1_e3avg"]
+[ext_resource type="PackedScene" uid="uid://blwfx4i2uvuk2" path="res://player/player.tscn" id="1_rpg24"]
+[ext_resource type="PackedScene" uid="uid://bcjmtw2eybwpb" path="res://save_guy.tscn" id="2_8rhti"]
+[ext_resource type="Texture2D" uid="uid://bcsr8oftonoc1" path="res://Command Blocks/Register Blocks/register_blocks_2.png" id="2_56f15"]
+[ext_resource type="Script" uid="uid://b0c7it31h4rhk" path="res://h_box_container.gd" id="3_n73o2"]
+[ext_resource type="FontFile" uid="uid://db5gf625ce73h" path="res://textures/dogicapixel.ttf" id="4_cs1hs"]
+[ext_resource type="PackedScene" uid="uid://ccqe3hexaaed4" path="res://Command Blocks/Mov Block/Mov Block.tscn" id="4_ohhpf"]
+[ext_resource type="PackedScene" uid="uid://y4ob8116laqg" path="res://Tilemap/BlueFloorButton.tscn" id="5_21bcp"]
+[ext_resource type="PackedScene" uid="uid://cxieswoc5086r" path="res://Command Blocks/Register Blocks/RegisterA.tscn" id="6_tpea4"]
+[ext_resource type="PackedScene" uid="uid://ce4ax8ktg8gi4" path="res://Command Blocks/Register Blocks/RegisterB.tscn" id="7_42dj3"]
+[ext_resource type="PackedScene" uid="uid://b3wgw7rwsgqfq" path="res://tile_map_layer.tscn" id="8_56f15"]
+[ext_resource type="PackedScene" uid="uid://dh26hbsdow2x1" path="res://pointer.tscn" id="10_dlkme"]
+[ext_resource type="PackedScene" uid="uid://bl6s2jfnl13qp" path="res://Command Blocks/Register Blocks/RegisterC.tscn" id="11_gaoim"]
+[ext_resource type="PackedScene" uid="uid://cqg4jc74qmohd" path="res://Command Blocks/Register Blocks/RegisterD.tscn" id="12_n73o2"]
+[ext_resource type="PackedScene" uid="uid://rmcaemghu874" path="res://Command Blocks/Register Blocks/RegisterE.tscn" id="13_cs1hs"]
+[ext_resource type="PackedScene" uid="uid://b5is26x8cil2e" path="res://Command Blocks/Register Blocks/RegisterF.tscn" id="14_v7taj"]
+[ext_resource type="PackedScene" uid="uid://bb2toicgqwqnh" path="res://Command Blocks/Register Blocks/RegisterG.tscn" id="15_jym3p"]
+[ext_resource type="Script" uid="uid://c3o4d17ac41lb" path="res://results_screen.gd" id="17_v7taj"]
+[ext_resource type="FontFile" uid="uid://cc4ocb2e7kaw7" path="res://textures/dogicapixelbold.ttf" id="18_jym3p"]
+[ext_resource type="Script" uid="uid://ud0v5uswxuvt" path="res://resetButton.gd" id="19_jym3p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v7taj"]
+font = ExtResource("4_cs1hs")
+font_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jym3p"]
+bg_color = Color(0.5647059, 0.6117647, 0.60784316, 0.45490196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50rgw"]
+bg_color = Color(5.0055983e-06, 0.6491378, 0.8974072, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4a7sh"]
+font = ExtResource("18_jym3p")
+
+[node name="Level2" type="Node2D" unique_id=893466301]
+script = ExtResource("1_e3avg")
+
+[node name="BaseMap" parent="." unique_id=2135186284 instance=ExtResource("8_56f15")]
+
+[node name="RegisterMarkers" type="Node2D" parent="BaseMap" unique_id=1899838177]
+
+[node name="Sprite2D" type="Sprite2D" parent="BaseMap/RegisterMarkers" unique_id=1904795100]
+position = Vector2(496, 11)
+texture = ExtResource("2_56f15")
+
+[node name="Obstacles" parent="." unique_id=64425941 instance=ExtResource("8_56f15")]
+tile_map_data = PackedByteArray("AAASAA0AAAABAAAAAAASAAkAAAABAAAAAAASAAcAAAABAAAAAAASAAUAAAABAAAAAAASAAMAAAABAAAAAAARAA0AAAABAAAAAAARAAsAAAABAAAAAAARAAcAAAABAAAAAAARAAUAAAABAAAAAAARAAMAAAABAAAAAAAQAA0AAAABAAAAAAAQAAsAAAABAAAAAAAQAAkAAAABAAAAAAAQAAcAAAABAAAAAAAQAAMAAAABAAAAAAAOAAMAAAABAAAAAAANAAMAAAABAAAAAAAMAAMAAAABAAAAAAAMAA0AAAABAAAAAAAOAA0AAAABAAAAAAAPAA0AAAABAAAAAAAPAAsAAAABAAAAAAAPAAkAAAABAAAAAAAPAAcAAAABAAAAAAAPAAUAAAABAAAAAAAOAAsAAAABAAAAAAAOAAkAAAABAAAAAAAOAAUAAAABAAAAAAANAAUAAAABAAAAAAAMAAUAAAABAAAAAAAMAAcAAAABAAAAAAAMAAkAAAABAAAAAAAMAAsAAAABAAAAAAANAAcAAAABAAAAAAANAAkAAAABAAAAAAANAAsAAAABAAAAAAA=")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=831644986]
+clip_contents = true
+offset_right = 352.0
+offset_bottom = 32.0
+theme_override_constants/separation = 0
+script = ExtResource("3_n73o2")
+
+[node name="StackLabel" type="Label" parent="HBoxContainer" unique_id=969971542]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+text = "Stack"
+label_settings = SubResource("LabelSettings_v7taj")
+
+[node name="Player" parent="." unique_id=1220541025 instance=ExtResource("1_rpg24")]
+top_level = true
+position = Vector2(80, 48)
+
+[node name="SaveGuy" parent="." unique_id=625520973 instance=ExtResource("2_8rhti")]
+position = Vector2(400, 48)
+
+[node name="BlueFloorButton" parent="." unique_id=1602278683 instance=ExtResource("5_21bcp")]
+position = Vector2(48, 48)
+
+[node name="Pointer" parent="." unique_id=628361251 instance=ExtResource("10_dlkme")]
+position = Vector2(16, 48)
+
+[node name="Blocks" type="Node2D" parent="." unique_id=803148600]
+
+[node name="Commands" type="Node2D" parent="Blocks" unique_id=1710415798]
+
+[node name="MovBlock" parent="Blocks/Commands" unique_id=1512604758 instance=ExtResource("4_ohhpf")]
+position = Vector2(144, 336)
+
+[node name="MovBlock2" parent="Blocks/Commands" unique_id=2087452311 instance=ExtResource("4_ohhpf")]
+position = Vector2(144, 400)
+
+[node name="MovBlock3" parent="Blocks/Commands" unique_id=691855730 instance=ExtResource("4_ohhpf")]
+position = Vector2(144, 80)
+
+[node name="MovBlock4" parent="Blocks/Commands" unique_id=823455835 instance=ExtResource("4_ohhpf")]
+position = Vector2(144, 144)
+
+[node name="MovBlock5" parent="Blocks/Commands" unique_id=455869535 instance=ExtResource("4_ohhpf")]
+position = Vector2(144, 208)
+
+[node name="MovBlock6" parent="Blocks/Commands" unique_id=1219621758 instance=ExtResource("4_ohhpf")]
+position = Vector2(144, 272)
+
+[node name="Registers" type="Node2D" parent="Blocks" unique_id=6493802]
+
+[node name="RegisterB" parent="Blocks/Registers" unique_id=1732475550 instance=ExtResource("7_42dj3")]
+position = Vector2(176, 400)
+
+[node name="RegisterC" parent="Blocks/Registers" unique_id=721524635 instance=ExtResource("11_gaoim")]
+position = Vector2(176, 208)
+
+[node name="RegisterC2" parent="Blocks/Registers" unique_id=1203152993 instance=ExtResource("11_gaoim")]
+position = Vector2(208, 272)
+
+[node name="RegisterD" parent="Blocks/Registers" unique_id=892496023 instance=ExtResource("12_n73o2")]
+position = Vector2(208, 144)
+
+[node name="RegisterD2" parent="Blocks/Registers" unique_id=672079856 instance=ExtResource("12_n73o2")]
+position = Vector2(176, 80)
+
+[node name="RegisterE" parent="Blocks/Registers" unique_id=164850444 instance=ExtResource("13_cs1hs")]
+position = Vector2(176, 144)
+
+[node name="RegisterE2" parent="Blocks/Registers" unique_id=1919777255 instance=ExtResource("13_cs1hs")]
+position = Vector2(208, 208)
+
+[node name="RegisterF" parent="Blocks/Registers" unique_id=1702445334 instance=ExtResource("14_v7taj")]
+position = Vector2(208, 336)
+
+[node name="RegisterF2" parent="Blocks/Registers" unique_id=1707693541 instance=ExtResource("14_v7taj")]
+position = Vector2(176, 272)
+
+[node name="RegisterG" parent="Blocks/Registers" unique_id=306757367 instance=ExtResource("15_jym3p")]
+position = Vector2(176, 336)
+
+[node name="RegisterA" parent="Blocks/Registers" unique_id=1298901291 instance=ExtResource("6_tpea4")]
+position = Vector2(208, 80)
+
+[node name="RegisterG2" parent="Blocks/Registers" unique_id=1246672929 instance=ExtResource("15_jym3p")]
+position = Vector2(208, 400)
+
+[node name="ResultsScreen" type="Control" parent="." unique_id=947032598]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 544.0
+script = ExtResource("17_v7taj")
+
+[node name="Distortion" type="Panel" parent="ResultsScreen" unique_id=875541692]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -272.0
+offset_right = 320.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jym3p")
+
+[node name="Panel" type="Panel" parent="ResultsScreen" unique_id=1227877792]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -100.0
+offset_right = 125.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_50rgw")
+
+[node name="Label" type="Label" parent="ResultsScreen" unique_id=468399472]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -51.5
+offset_right = 20.0
+offset_bottom = -28.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_4a7sh")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ResultsScreen" unique_id=409589102]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = 48.0
+offset_right = 78.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Reset"
+script = ExtResource("19_jym3p")

@@ -1,0 +1,224 @@
+[gd_scene format=3 uid="uid://ch26m2q6sprrb"]
+
+[ext_resource type="PackedScene" uid="uid://bjh6hvblap5ci" path="res://level_box.tscn" id="1_ceawy"]
+
+[node name="LevelGrid" type="GridContainer" unique_id=1209191889]
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 12
+
+[node name="LevelBox" parent="." unique_id=1715142366 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox2" parent="." unique_id=579370471 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox3" parent="." unique_id=1607812926 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox4" parent="." unique_id=866195528 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox5" parent="." unique_id=1058114330 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox6" parent="." unique_id=1398128650 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox7" parent="." unique_id=433920620 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox8" parent="." unique_id=519421184 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox9" parent="." unique_id=992047987 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox10" parent="." unique_id=107966665 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox11" parent="." unique_id=1875000200 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox12" parent="." unique_id=261109064 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox13" parent="." unique_id=1786410900 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox14" parent="." unique_id=385446317 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox15" parent="." unique_id=1362616579 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox16" parent="." unique_id=1283022822 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox17" parent="." unique_id=139930187 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox18" parent="." unique_id=1801953497 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox19" parent="." unique_id=1825381083 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox20" parent="." unique_id=1055234351 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox21" parent="." unique_id=1257610171 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox22" parent="." unique_id=498694293 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox23" parent="." unique_id=717827146 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox24" parent="." unique_id=1800586517 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox25" parent="." unique_id=1470225122 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox26" parent="." unique_id=2116525811 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox27" parent="." unique_id=1107672606 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox28" parent="." unique_id=2081277946 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox29" parent="." unique_id=1661415840 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox30" parent="." unique_id=369762090 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox31" parent="." unique_id=2103932201 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox32" parent="." unique_id=746456403 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox33" parent="." unique_id=1234994172 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox34" parent="." unique_id=2026036017 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox35" parent="." unique_id=428661918 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox36" parent="." unique_id=18979743 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox37" parent="." unique_id=1740286652 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox38" parent="." unique_id=1801095930 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox39" parent="." unique_id=609169286 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox40" parent="." unique_id=1118026458 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox41" parent="." unique_id=1988619309 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox42" parent="." unique_id=717552580 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox43" parent="." unique_id=1116141138 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox44" parent="." unique_id=817402686 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox45" parent="." unique_id=1121945414 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox46" parent="." unique_id=1441310030 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox47" parent="." unique_id=1665592549 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox48" parent="." unique_id=1452814087 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox49" parent="." unique_id=1415105507 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox50" parent="." unique_id=373594418 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox51" parent="." unique_id=283714508 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox52" parent="." unique_id=1062431619 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox53" parent="." unique_id=171158076 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox54" parent="." unique_id=2041383816 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox55" parent="." unique_id=1554603542 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox56" parent="." unique_id=1623319736 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox57" parent="." unique_id=361366834 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox58" parent="." unique_id=1672654820 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox59" parent="." unique_id=604258774 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox60" parent="." unique_id=2104428025 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox61" parent="." unique_id=1595919255 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox62" parent="." unique_id=1912350382 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox63" parent="." unique_id=1049138908 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox64" parent="." unique_id=172907602 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox65" parent="." unique_id=205543843 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox66" parent="." unique_id=333472968 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox67" parent="." unique_id=866871888 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox68" parent="." unique_id=1682521009 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox69" parent="." unique_id=1228424402 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox70" parent="." unique_id=1951165264 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox71" parent="." unique_id=876629457 instance=ExtResource("1_ceawy")]
+layout_mode = 2
+
+[node name="LevelBox72" parent="." unique_id=420945822 instance=ExtResource("1_ceawy")]
+layout_mode = 2

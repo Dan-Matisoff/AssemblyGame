@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dh26hbsdow2x1"]
+
+[ext_resource type="Texture2D" uid="uid://upjy1lveffs7" path="res://textures/pointer.png" id="1_lu6pp"]
+[ext_resource type="Script" uid="uid://chbm7ttxycvll" path="res://pointer.gd" id="1_p82c6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p82c6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lu6pp"]
+
+[node name="Pointer" type="Node2D" unique_id=628361251]
+script = ExtResource("1_p82c6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=216028163]
+texture = ExtResource("1_lu6pp")
+
+[node name="Command" type="Area2D" parent="." unique_id=1847313244]
+position = Vector2(128, 0)
+collision_layer = 0
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Command" unique_id=1435219495]
+shape = SubResource("CircleShape2D_p82c6")
+
+[node name="Registers" type="Node2D" parent="." unique_id=762805441]
+position = Vector2(384, 0)
+
+[node name="RegisterA" type="Area2D" parent="Registers" unique_id=1329437837]
+collision_layer = 0
+collision_mask = 514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Registers/RegisterA" unique_id=503738113]
+shape = SubResource("CircleShape2D_lu6pp")
+
+[node name="RegisterB" type="Area2D" parent="Registers" unique_id=2083912659]
+position = Vector2(32, 0)
+collision_layer = 0
+collision_mask = 514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Registers/RegisterB" unique_id=1325805858]
+shape = SubResource("CircleShape2D_lu6pp")
+
+[node name="RegisterC" type="Area2D" parent="Registers" unique_id=245683920]
+position = Vector2(64, 0)
+collision_layer = 0
+collision_mask = 514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Registers/RegisterC" unique_id=2010398914]
+shape = SubResource("CircleShape2D_lu6pp")
+
+[node name="RegisterD" type="Area2D" parent="Registers" unique_id=1865172502]
+position = Vector2(96, 0)
+collision_layer = 0
+collision_mask = 514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Registers/RegisterD" unique_id=462888315]
+shape = SubResource("CircleShape2D_lu6pp")
+
+[node name="RegisterE" type="Area2D" parent="Registers" unique_id=942074411]
+position = Vector2(128, 0)
+collision_layer = 0
+collision_mask = 514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Registers/RegisterE" unique_id=89687239]
+shape = SubResource("CircleShape2D_lu6pp")
+
+[node name="RegisterF" type="Area2D" parent="Registers" unique_id=1436151210]
+position = Vector2(160, 0)
+collision_layer = 0
+collision_mask = 514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Registers/RegisterF" unique_id=1986471805]
+shape = SubResource("CircleShape2D_lu6pp")
+
+[node name="RegisterG" type="Area2D" parent="Registers" unique_id=2004621159]
+position = Vector2(192, 0)
+collision_layer = 0
+collision_mask = 514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Registers/RegisterG" unique_id=1640958250]
+shape = SubResource("CircleShape2D_lu6pp")

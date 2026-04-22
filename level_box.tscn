@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bjh6hvblap5ci"]
+
+[ext_resource type="Script" uid="uid://bylpk3abmrwlu" path="res://level_box.gd" id="1_5my8l"]
+[ext_resource type="Texture2D" uid="uid://upjy1lveffs7" path="res://textures/pointer.png" id="2_iwgcf"]
+
+[node name="LevelBox" type="PanelContainer" unique_id=1607812926]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5my8l")
+
+[node name="Label" type="Label" parent="." unique_id=805963151]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=356883463]
+layout_mode = 2
+
+[node name="Lock" type="TextureRect" parent="MarginContainer" unique_id=131638509]
+layout_mode = 2
+texture = ExtResource("2_iwgcf")
